@@ -1,0 +1,17 @@
+.list {
+  padding: 15px;
+  max-width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 3px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.item:hover,
+.item:focus {
+  color: #111;
+}

@@ -1,0 +1,22 @@
+.form {
+  margin: 15px;
+  max-width: 300px;
+}
+
+.input {
+  padding: 5px;
+  outline: none;
+  margin-right: 5px;
+}
+
+.input,
+.btn {
+  color: #0d253f;
+  border: 1px solid #111;
+  border-radius: 4px;
+  height: 35px;
+}
+
+.btn {
+  width: 35px;
+}
