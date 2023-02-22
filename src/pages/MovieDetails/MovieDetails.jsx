@@ -1,13 +1,13 @@
-import { useState, useEffect, Suspense, lazy } from 'react';
-import { useParams, Link, Route, Routes, useLocation } from 'react-router-dom';
+import { useState, useEffect, Suspense, } from 'react';
+import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
 import { Notify } from 'notiflix';
 import { Loader } from 'components/Loader/Loader';
 import { getMovieDetails } from 'services/API';
 import styles from './MovieDetails.module.css';
 
-const Cast = lazy(() => import('pages/Cast/Cast'));
-const Reviews = lazy(() => import('pages/Reviews/Reviews'));
+
+
 
 function MovieDetails() {
   const [movieInfo, setMovieInfo] = useState(null);
@@ -90,10 +90,7 @@ function MovieDetails() {
           Cast
         </Link>
         <Suspense fallback={<Loader />}>
-          <Routes>
-            <Route path="cast" element={<Cast />} />
-            <Route path="reviews" element={<Reviews />} />
-          </Routes>
+          <Outlet />
         </Suspense>
       </div>
     </div>
